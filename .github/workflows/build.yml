@@ -28,7 +28,7 @@ env:
   # This ensures if a a new branch is created in this repo it won't automatically
   # push an image.
   # If this is a backport then change this to the name of the backports branch
-  PUBLISH_BRANCH: main
+  PUBLISH_BRANCH: 4.x
 
   # IMAGE: jupyterhub/jupyterhub
   IMAGE: manics/jupyterhub-image-test

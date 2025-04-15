@@ -10,6 +10,7 @@ on:
     branches-ignore:
       - "dependabot/**"
       - "pre-commit-ci-update-config"
+      - "update-requirements/**"
   workflow_dispatch:
 
 # Tags are calculated based on the existing tags in the repository

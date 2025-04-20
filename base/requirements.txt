@@ -56,7 +56,7 @@ markupsafe==3.0.2
     #   mako
 oauthlib==3.2.2
     # via jupyterhub
-packaging==24.2
+packaging==25.0
     # via
     #   jupyter-events
     #   jupyterhub

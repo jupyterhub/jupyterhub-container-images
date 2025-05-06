@@ -58,3 +58,8 @@ can be replaced with
 FROM quay.io/jupyterhub/jupyterhub:5.2.1
 COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 ```
+
+## Making a new release
+
+Dependencies are automatically updated once a week.
+To immediately make a new build, for example after a new version of JupyterHub is released, use the `workflow_dispatch` trigger on the [`watch-dependencies`](https://github.com/jupyterhub/jupyterhub-container-images/actions/workflows/watch-dependencies.yaml) workflow.

@@ -29,6 +29,7 @@ repos:
       - id: ruff-format
 
   # Static security analysis of GitHub actions https://github.com/woodruffw/zizmor
+  # Additional config is in .github/zizmor.yml
   - repo: https://github.com/woodruffw/zizmor-pre-commit
     rev: v1.6.0
     hooks:

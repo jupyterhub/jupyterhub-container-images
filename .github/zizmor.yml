@@ -1,0 +1,11 @@
+# Zizmor configuration file
+rules:
+  unpinned-uses:
+    config:
+      policies:
+        # Zizmor defaults to requiring pinning by immutable hashes.
+        # Allow pinning by refs for trusted organisations.
+        # https://woodruffw.github.io/zizmor/audits/#rulesunpinned-usesconfigpolicies
+        actions/*: ref-pin
+        docker/*: ref-pin
+        jupyterhub/*: ref-pin

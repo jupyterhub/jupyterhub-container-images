@@ -3,8 +3,6 @@
 # by the following command:
 #
 #    Use the "Run workflow" button at https://github.com/jupyterhub/jupyterhub-container-images/actions/workflows/watch-dependencies.yaml
-
-#
 alembic==1.15.2
     # via jupyterhub
 annotated-types==0.7.0
@@ -40,7 +38,7 @@ jinja2==3.1.6
     # via jupyterhub
 jsonpointer==3.0.0
     # via jsonschema
-jsonschema==4.23.0
+jsonschema[format-nongpl]==4.23.0
     # via jupyter-events
 jsonschema-specifications==2025.4.1
     # via jsonschema
@@ -105,7 +103,7 @@ sqlalchemy==2.0.40
     # via
     #   alembic
     #   jupyterhub
-tornado==6.4.2
+tornado==6.5.1
     # via jupyterhub
 traitlets==5.14.3
     # via

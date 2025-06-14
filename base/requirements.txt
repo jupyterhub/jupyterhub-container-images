@@ -66,7 +66,7 @@ prometheus-client==0.22.1
     # via jupyterhub
 pycparser==2.22
     # via cffi
-pydantic==2.11.5
+pydantic==2.11.6
     # via jupyterhub
 pydantic-core==2.33.2
     # via pydantic

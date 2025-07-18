@@ -75,7 +75,7 @@ RUN apt-get update -qq \
     nodejs \
     npm \
  && locale-gen $LC_ALL \
- && npm install -g configurable-http-proxy@^4.6.2 \
+ && npm install -g configurable-http-proxy@^5.0.1 \
  # clean cache and logs
  && rm -rf /var/lib/apt/lists/* /var/log/* /var/tmp/* ~/.npm
 # install the wheels we built in the previous stage

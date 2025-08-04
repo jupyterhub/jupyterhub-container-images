@@ -16,13 +16,13 @@ ci:
 repos:
   # https://github.com/pre-commit/mirrors-prettier is not maintained
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: v3.5.3
+    rev: v3.6.2
     hooks:
       - id: prettier
 
   # autoformat and lint Python code
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.8
+    rev: v0.12.7
     hooks:
       - id: ruff
         args: ["--select=I", "--fix", "--show-fixes"]
@@ -31,6 +31,6 @@ repos:
   # Static security analysis of GitHub actions https://github.com/woodruffw/zizmor
   # Additional config is in .github/zizmor.yml
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.6.0
+    rev: v1.11.0
     hooks:
       - id: zizmor

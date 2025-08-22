@@ -117,7 +117,7 @@ traitlets==5.14.3
     # via
     #   jupyter-events
     #   jupyterhub
-types-python-dateutil==2.9.0.20250809
+types-python-dateutil==2.9.0.20250822
     # via arrow
 typing-extensions==4.14.1
     # via

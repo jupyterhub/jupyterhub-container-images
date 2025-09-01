@@ -52,7 +52,7 @@ jobs:
       jupyterhub-version: ${{ steps.version.outputs.VERSION }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           persist-credentials: false
 
@@ -100,7 +100,7 @@ jobs:
           - 5000:5000
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           persist-credentials: false
 

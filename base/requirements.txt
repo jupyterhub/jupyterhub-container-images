@@ -19,7 +19,7 @@ certifi==2025.8.3
     # via requests
 certipy==0.2.2
     # via jupyterhub
-cffi==1.17.1
+cffi==2.0.0
     # via cryptography
 charset-normalizer==3.4.3
     # via requests
@@ -66,9 +66,9 @@ pamela==1.2.0
     # via jupyterhub
 prometheus-client==0.22.1
     # via jupyterhub
-pycparser==2.22
+pycparser==2.23
     # via cffi
-pydantic==2.11.7
+pydantic==2.11.8
     # via jupyterhub
 pydantic-core==2.33.2
     # via pydantic

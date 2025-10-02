@@ -1,0 +1,6 @@
+{
+  "name": "jupyterhub-dependencies",
+  "dependencies": {
+    "configurable-http-proxy": "^4.6.3"
+  }
+}

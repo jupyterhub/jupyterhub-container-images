@@ -75,9 +75,17 @@ RUN apt-get update -qq \
     nodejs \
     npm \
  && locale-gen $LC_ALL \
- && npm install -g configurable-http-proxy@^4.6.2 \
  # clean cache and logs
- && rm -rf /var/lib/apt/lists/* /var/log/* /var/tmp/* ~/.npm
+ && rm -rf /var/lib/apt/lists/* /var/log/* /var/tmp/*
+
+# Install configurable-http-proxy, but pin all dependencies
+# Note npm install -g doesn't work with package.json so do it manually
+COPY package-lock.json package.json /usr/local/lib/
+RUN cd /usr/local/lib \
+ && npm install \
+ && ln -s ../lib/node_modules/configurable-http-proxy/bin/configurable-http-proxy /usr/local/bin/ \
+ && rm -rf ~/.npm
+
 # install the wheels we built in the previous stage
 RUN --mount=type=cache,from=wheel-builder,source=/src/jupyterhub/wheelhouse,target=/tmp/wheelhouse \
     # always make sure pip is up to date!

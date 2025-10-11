@@ -3,6 +3,7 @@
 # by the following command:
 #
 #    Use the "Run workflow" button at https://github.com/jupyterhub/jupyterhub-container-images/actions/workflows/watch-dependencies.yaml
+
 #
 alembic==1.16.5
     # via jupyterhub
@@ -67,9 +68,9 @@ prometheus-client==0.23.1
     # via jupyterhub
 pycparser==2.23
     # via cffi
-pydantic==2.11.10
+pydantic==2.12.0
     # via jupyterhub
-pydantic-core==2.33.2
+pydantic-core==2.41.1
     # via pydantic
 python-dateutil==2.9.0.post0
     # via
@@ -104,7 +105,7 @@ six==1.17.0
     # via
     #   python-dateutil
     #   rfc3339-validator
-sqlalchemy==2.0.43
+sqlalchemy==2.0.44
     # via
     #   alembic
     #   jupyterhub
@@ -114,7 +115,7 @@ traitlets==5.14.3
     # via
     #   jupyter-events
     #   jupyterhub
-types-python-dateutil==2.9.0.20250822
+types-python-dateutil==2.9.0.20251008
     # via arrow
 typing-extensions==4.15.0
     # via

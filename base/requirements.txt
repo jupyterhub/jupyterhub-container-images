@@ -68,7 +68,7 @@ prometheus-client==0.23.1
     # via jupyterhub
 pycparser==2.23
     # via cffi
-pydantic==2.12.4
+pydantic==2.12.5
     # via jupyterhub
 pydantic-core==2.41.5
     # via pydantic
@@ -97,7 +97,7 @@ rfc3986-validator==0.1.1
     #   jupyter-events
 rfc3987-syntax==1.1.0
     # via jsonschema
-rpds-py==0.29.0
+rpds-py==0.30.0
     # via
     #   jsonschema
     #   referencing

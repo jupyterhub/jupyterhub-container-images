@@ -8,9 +8,12 @@ updates:
       - dependencies
     schedule:
       interval: monthly
-  # Bump base/requirements.txt
+  # base/requirements.txt: security fixes only
+  # Other version updates are handled by workflows/watch-dependencies.yaml
   - package-ecosystem: pip
     directory: /base
+    # https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/customizing-dependabot-security-prs#example-1-configuration-for-security-updates-only
+    open-pull-requests-limit: 0
     schedule:
       interval: daily
     labels:

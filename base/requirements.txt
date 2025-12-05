@@ -27,7 +27,7 @@ cryptography==46.0.3
     # via certipy
 fqdn==1.5.1
     # via jsonschema
-greenlet==3.2.4
+greenlet==3.3.0
     # via sqlalchemy
 idna==3.11
     # via

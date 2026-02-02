@@ -5,7 +5,7 @@
 #    Use the "Run workflow" button at https://github.com/jupyterhub/jupyterhub-container-images/actions/workflows/watch-dependencies.yaml
 
 #
-alembic==1.17.2
+alembic==1.18.1
     # via jupyterhub
 annotated-types==0.7.0
     # via pydantic
@@ -27,7 +27,7 @@ cryptography==46.0.3
     # via certipy
 fqdn==1.5.1
     # via jsonschema
-greenlet==3.3.0
+greenlet==3.3.1
     # via sqlalchemy
 idna==3.11
     # via
@@ -58,15 +58,15 @@ markupsafe==3.0.3
     #   mako
 oauthlib==3.3.1
     # via jupyterhub
-packaging==25.0
+packaging==26.0
     # via
     #   jupyter-events
     #   jupyterhub
 pamela==1.2.0
     # via jupyterhub
-prometheus-client==0.23.1
+prometheus-client==0.24.1
     # via jupyterhub
-pycparser==2.23
+pycparser==3.0
     # via cffi
 pydantic==2.12.5
     # via jupyterhub
@@ -105,7 +105,7 @@ six==1.17.0
     # via
     #   python-dateutil
     #   rfc3339-validator
-sqlalchemy==2.0.45
+sqlalchemy==2.0.46
     # via
     #   alembic
     #   jupyterhub

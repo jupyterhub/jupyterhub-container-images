@@ -15,7 +15,7 @@ attrs==25.4.0
     # via
     #   jsonschema
     #   referencing
-certifi==2026.1.4
+certifi==2026.2.25
     # via requests
 certipy==0.2.2
     # via jupyterhub
@@ -105,7 +105,7 @@ six==1.17.0
     # via
     #   python-dateutil
     #   rfc3339-validator
-sqlalchemy==2.0.46
+sqlalchemy==2.0.47
     # via
     #   alembic
     #   jupyterhub

@@ -109,7 +109,7 @@ sqlalchemy==2.0.48
     # via
     #   alembic
     #   jupyterhub
-tornado==6.5.4
+tornado==6.5.5
     # via jupyterhub
 traitlets==5.14.3
     # via

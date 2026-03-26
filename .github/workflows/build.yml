@@ -123,7 +123,7 @@ jobs:
       # We never run or use untrusted code so cache-poisoning shouldn't be
       # possible other than if a dependency or action is compromised
       - name: Set up Docker Buildx (for multi-arch builds)
-        uses: docker/setup-buildx-action@v3 # zizmor: ignore[cache-poisoning]
+        uses: docker/setup-buildx-action@v4 # zizmor: ignore[cache-poisoning]
         with:
           # Allows pushing to registry on localhost:5000
           driver-opts: network=host

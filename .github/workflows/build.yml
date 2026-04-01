@@ -169,7 +169,7 @@ jobs:
           echo "Image tags: ${{ steps.jupyterhubtags.outputs.tags }}"
 
       - name: Build and push jupyterhub
-        uses: docker/build-push-action@v6 # zizmor: ignore[cache-poisoning]
+        uses: docker/build-push-action@v7 # zizmor: ignore[cache-poisoning]
         with:
           context: base
           platforms: linux/amd64,linux/arm64
@@ -194,7 +194,7 @@ jobs:
             ${{ (env.PUBLIC == 'true' && env.PUBLISH_DOCKERIO == 'true') && format('{0}-demo:', env.IMAGE) || '' }}
 
       - name: Build and push jupyterhub-demo
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           build-args: |
             BASE_IMAGE=${{ fromJson(steps.jupyterhubtags.outputs.tags)[0] }}
@@ -219,7 +219,7 @@ jobs:
             ${{ (env.PUBLIC == 'true' && env.PUBLISH_DOCKERIO == 'true') && format('{0}:', env.SINGLEUSER) || '' }}
 
       - name: Build and push jupyterhub/singleuser
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           build-args: |
             JUPYTERHUB_VERSION=${{ needs.tag.outputs.jupyterhub-version }}

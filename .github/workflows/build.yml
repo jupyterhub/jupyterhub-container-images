@@ -69,7 +69,7 @@ jobs:
 
       - name: Get build-number by looking at existing tags
         id: quayio
-        uses: jupyterhub/action-get-quayio-tags@v0.1.0
+        uses: jupyterhub/action-get-quayio-tags@v1.0.0
         with:
           repository: ${{ env.IMAGE }}
           version: ${{ steps.version.outputs.VERSION }}

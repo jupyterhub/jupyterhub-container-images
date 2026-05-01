@@ -13,7 +13,7 @@ updates:
     groups:
       github-actions:
         patterns:
-          - '*'
+          - "*"
   # base/requirements.txt: security fixes only
   # Other version updates are handled by workflows/watch-dependencies.yaml
   - package-ecosystem: pip

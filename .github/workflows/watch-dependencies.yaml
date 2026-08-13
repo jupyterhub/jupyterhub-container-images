@@ -47,7 +47,7 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           # this should match the Python version in base/Dockerfile
-          python-version: "3.12"
+          python-version: "3.14"
       - name: install pip-tools
         run: |
           # temporary: pip-compile not yet compatible with pip 26.2

@@ -18,7 +18,7 @@
 
 # note: if changing BASE_IMAGE changes the Python version,
 # update version in .github/workflows/watch-dependencies.yaml
-ARG BASE_IMAGE=ubuntu:24.04
+ARG BASE_IMAGE=ubuntu:26.04
 
 ######################################################################
 # Ensure we have wheels for JupyterHub and all dependencies,

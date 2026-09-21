@@ -50,8 +50,7 @@ jobs:
           python-version: "3.14"
       - name: install pip-tools
         run: |
-          # temporary: pip-compile not yet compatible with pip 26.2
-          pip install --upgrade 'pip<26.2'
+          pip install --upgrade pip
           pip install pip-tools
           pip list --format=freeze
 

@@ -80,14 +80,25 @@ RUN apt-get update -qq \
     python3-pip \
     python3-pycurl \
     python3-venv \
-    nodejs \
-    npm \
  && locale-gen $LC_ALL \
  # distribution pip uses system certs, bundled certifi is ignored
  # delete to avoid false alerts in vulnerability scanners
  && rm /usr/lib/python3/dist-packages/pip/_vendor/certifi/cacert.pem \
  # clean cache and logs
  && rm -rf /var/lib/apt/lists/* /var/log/* /var/tmp/*
+
+ARG NODE_VERSION=24.22.1
+RUN apt-get update -qq \
+    && apt-get install -yqq --no-install-recommends xz-utils \
+    && arch="$(dpkg --print-architecture | sed 's/amd64/x64/')" \
+    && cd /tmp \
+    && curl -fsSLO "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-${arch}.tar.xz" \
+    && curl -fsSLO "https://nodejs.org/dist/v${NODE_VERSION}/SHASUMS256.txt" \
+    && grep " node-v${NODE_VERSION}-linux-${arch}.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
+    && tar -xJf "node-v${NODE_VERSION}-linux-${arch}.tar.xz" -C /usr/local --strip-components=1 --no-same-owner --exclude='*.md' --exclude=LICENSE \
+    && rm -f /tmp/node-v* /tmp/SHASUMS256.txt \
+    && rm -rf /var/lib/apt/lists/*
+ENV NODE_OPTIONS=--use-openssl-ca
 
 # Install configurable-http-proxy, but pin all dependencies
 # Note npm install -g doesn't work with package.json so do it manually
@@ -106,5 +117,14 @@ RUN --mount=type=cache,from=wheel-builder,source=/src/jupyterhub/wheelhouse,targ
     # always make sure pip is up to date!
  && python3 -m pip install --no-compile --no-cache-dir --upgrade setuptools pip \
  && python3 -m pip install --no-compile --no-cache-dir /tmp/wheelhouse/*
+
+# The distribution's seed wheel for `python3 -m venv` is an old pip with its own certifi CA list.
+# Replace it with a current release so new venvs start from a fixed pip.
+RUN rm -f /usr/share/python-wheels/pip-*.whl \
+ && python3 -m pip download --no-deps --only-binary=:all: --no-cache-dir \
+    -d /usr/share/python-wheels 'pip>=26.2.2'
+# pip from PyPI ships its own CA list; point it at the system store so internal CAs added
+# with update-ca-certificates are trusted by pip in this image and in venvs created from it
+ENV PIP_CERT=/etc/ssl/certs/ca-certificates.crt
 
 CMD ["jupyterhub"]

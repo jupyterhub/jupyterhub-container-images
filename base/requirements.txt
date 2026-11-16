@@ -52,7 +52,7 @@ isoduration==20.11.0
     # via jsonschema
 jinja2==3.1.6
     # via jupyterhub
-jsonpointer==3.10
+jsonpointer==3.12
     # via jsonschema
 jsonschema==4.26.0
     # via jupyter-events
@@ -131,7 +131,7 @@ sqlalchemy==2.1.8
     # via
     #   alembic
     #   jupyterhub
-tornado==6.6
+tornado==6.6.1
     # via jupyterhub
 traitlets==5.16.1
     # via

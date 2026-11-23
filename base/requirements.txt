@@ -24,7 +24,7 @@ attrs==26.1.0
     #   aiohttp
     #   jsonschema
     #   referencing
-certifi==2026.10.23
+certifi==2026.11.20
     # via requests
 certipy==0.2.3
     # via jupyterhub
@@ -32,7 +32,7 @@ cffi==2.1.1
     # via
     #   cryptography
     #   pycares
-charset-normalizer==3.5.2
+charset-normalizer==3.5.3
     # via requests
 cryptography==50.0.2
     # via certipy
@@ -92,9 +92,9 @@ pycares==5.2.1
     # via aiodns
 pycparser==3.12
     # via cffi
-pydantic==2.14.3
+pydantic==2.14.4
     # via jupyterhub
-pydantic-core==2.50.4
+pydantic-core==2.50.5
     # via pydantic
 python-dateutil==4.0.0
     # via
@@ -102,7 +102,7 @@ python-dateutil==4.0.0
     #   jupyterhub
 python-json-logger==4.2.0
     # via jupyter-events
-pyyaml==6.0.3
+pyyaml==6.0.4
     # via jupyter-events
 referencing==0.37.0
     # via
@@ -127,7 +127,7 @@ rpds-py==2026.9.1
     #   referencing
 six==1.17.0
     # via rfc3339-validator
-sqlalchemy==2.1.8
+sqlalchemy==2.1.9
     # via
     #   alembic
     #   jupyterhub
